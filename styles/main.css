@@ -18,6 +18,10 @@ body {
   line-height: 1.5;
 }
 
+/*.container {
+  padding-bottom: 300px;
+}*/
+
 /* for navbar or just space */
 /*.container {
   padding-top: 20px;
@@ -38,7 +42,10 @@ body {
   background-color: lightgrey;
   height: 80px;
   padding: 20px 10%;
-  border-top: 1px solid grey; }
+  border-top: 1px solid grey;
+
+  margin-top: 300px;
+}
 a:hover {
   text-decoration: none;
 }
