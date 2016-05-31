@@ -20,7 +20,7 @@
 
 
 
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
+<nav id="top" class="navbar navbar-default navbar-static-top" role="navigation">
 	<div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -40,7 +40,7 @@
         <!--normal header-->
         <div style="margin: 10px 0;">
         <span>
-            <a style="color: black;" href="/personal">
+            <a style="color: black;" href="/about">
                 <img src="/images/personal/profile.jpg" style="height: 40px;" />
                 <span class="left_right_margin">About Me</span>
             </a>
@@ -84,14 +84,80 @@
 
 			<h1>Misc Notes</h1>
 
+			<div class="btn-group pull-right">
+				<a type="button" href="#ml" class="btn btn-default">ML</a>
+			  <a type="button" href="#information" class="btn btn-default">Info Theory</a>
+			  <a type="button" href="#physics" class="btn btn-default">Physics</a>
+			</div>
+
       <!-- Fourier -->
       <div>
         <h2>Fourier</h2>
+        <center>
 
+				<!-- coefficients -->
+				<strong>coefficients</strong>
         $$ c_n = \frac{1}{T}  \int_{-T/2}^{T/2} e^{-2 \pi i n t / T} f(t) dt $$
+
+        Often put $ \frac{1}{\sqrt T} $ into harmonic $ \frac{1}{\sqrt T} e^{-2 \pi i n t / T} $
+
+        <hr class="small_hr"/>
+
+				<!-- duality -->
+				<strong>duality & transformations</strong>
+				$$
+					\mathcal{F} f = (\mathcal{F}^{-1} f)^{-}
+				$$
+				$$
+					\mathcal{F} f^{-} = \mathcal{F}^{-1} f
+				$$
+
+				shift
+				$$
+					f(t \pm b) \rightleftharpoons e^{\pm 2 \pi i s b} F(s)
+				$$
+
+				stretch
+				$$
+					f(a t) \rightleftharpoons \frac{1}{|a|} F(\frac{s}{a})
+				$$
+
+
+				</center>
       </div>
       <!-- end Fourier -->
 
+
+			<!-- Machine Learning -->
+      <div id="ml">
+        <h2>Machine Learning</h2>
+        <center>
+				</center>
+			</div>
+
+
+			<!-- Information Theory -->
+      <div id="information">
+        <h2>Information Theory</h2>
+        <center>
+				</center>
+			</div>
+
+
+
+			<!-- Physics -->
+      <div id="physics">
+        <h2>Physics</h2>
+        <center>
+				</center>
+			</div>
+
+
+
+
+
+
+			<a href="#top" class="pull-right">Top</a>
 		</div>
 	</div>
 
