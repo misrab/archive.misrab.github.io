@@ -132,6 +132,49 @@
       <div id="ml">
         <h2>Machine Learning</h2>
         <center>
+					<!-- common distributions -->
+					<strong>common distributions (less familiar ones)</strong><br/>
+
+
+					<strong>Multinomial</strong>
+					$$
+						Mu(\mathbf{x} \mid n, \mathbf{\theta}) \triangleq {{n}\choose{x_1...x_K}} \prod_{j=1}^{K} \theta_{j}^{x_j}
+					$$
+					where $$ {{n}\choose{x_1...x_K}} \triangleq \frac{n!}{x_1!...x_K!} $$
+
+					Rolling $K$ sided die once ("Multinoulli"):
+
+					$$ Cat(x \mid \mathbf{\theta}) \triangleq Mu(x \mid 1, \mathbf{\theta}) $$
+
+					<strong>Gamma</strong> (for $T, a, b$ in $ \mathbb{R}^+ $)
+					$$
+						Ga(T \mid shape = a, rate = b) \triangleq \frac{b^a}{\Gamma(a)} T^{a-1} e^{-Tb}
+					$$
+					where $$ \Gamma(x) \triangleq \int_{0}^{\infty} u^{x-1} e^{-u} du $$
+					$$ Exp(x \mid \lambda ) = Ga(x \mid 1, \lambda)$$
+					$$ \chi^2(x \mid \nu) = Ga(x \mid \frac{\nu}{2}, \frac{1}{2})$$
+
+					<strong>Beta</strong>
+
+					$$
+						Beta(x \mid a, b) = \frac{1}{B(a,b)} x^{a-1} (1-x)^{b-1}
+					$$
+
+					where $$ B(a,b) \triangleq \frac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)} $$
+
+
+					<hr class="small_hr"/>
+
+					<strong>transformations</strong>
+
+					$$
+						p_y(y) = p_x(x) \left\lvert \frac{dx}{dy} \right\rvert
+					$$
+
+
+					<hr class="small_hr"/>
+
+
 				</center>
 			</div>
 

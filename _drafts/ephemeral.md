@@ -1,9 +1,10 @@
 ---
-title: Knowledge & Discovery
+title: On Ephemerality & Knowledge
 layout: blog
-date: 2015-10-28
+date: 2016-06-01
 excerpt: |
-  A thought on the novelty of learning
+  How can knowledge and achievement be viewed through the lens of
+  stocks and flows?
 ---
 
 
@@ -17,8 +18,4 @@ More than once, I've heard someone say something along the lines of "the age of 
 
 I knew that I disagreed with this the first time I heard it, but after some reflection the reasons are a bit more clear to me. I thought the conclusions were sufficiently interesting to share, in that they relate to the general concepts of knowledge and discovery.
 
-First of all, in many ways there probably is less and less low hanging fruit to discover. 
-
-
-
-
+First of all, in many ways there probably is less and less low hanging fruit to discover.
