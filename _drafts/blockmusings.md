@@ -7,16 +7,13 @@ excerpt: |
   Thoughts on the evolution of the blockchain ecosystem
 ---
 
-# Crypto
+# Blockchain Musings
+
+_Posted on May 30th, 2016_
+
+
 
 <!-- _Posted on January 26th, 2016_ -->
-
-
-## Intro
-
-
-
-
+<!-- ## Intro
 ## Conclusion
-
-## Acknowledgements
+## Acknowledgements -->
