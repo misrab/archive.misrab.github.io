@@ -89,19 +89,30 @@
 			  <a type="button" href="#information" class="btn btn-default">Info Theory</a>
 			  <a type="button" href="#physics" class="btn btn-default">Physics</a>
 			</div>
+			<hr class="small_hr"/>
+
 
       <!-- Fourier -->
       <div>
         <h2>Fourier</h2>
         <center>
 
-				<!-- coefficients -->
-				<strong>coefficients</strong>
-        $$ c_n = \frac{1}{T}  \int_{-T/2}^{T/2} e^{-2 \pi i n t / T} f(t) dt $$
+				<!-- differentials -->
+				<strong>differentials</strong>
 
-        Often put $ \frac{1}{\sqrt T} $ into harmonic $ \frac{1}{\sqrt T} e^{-2 \pi i n t / T} $
+				$$
+					(\mathcal{F} f^{(n)})(s) = (2 \pi i s)^n \mathcal{F} f (s)
+				$$
+				$$
+					P(\frac{d}{dx}) = a_n(\frac{d}{dx})^n + ... + a_1 \frac{d}{dx} + a_0
+				$$
+				$$
+					(\mathcal{F} (P(\frac{d}{dx}) f))(s) = P(2 \pi i s) \mathcal{F} f (s)
+					= (\sum_{i=0}^{n} a_i (2 \pi i s)^i) \mathcal{F} f (s)
+				$$
 
-        <hr class="small_hr"/>
+
+				<hr class="small_hr"/>
 
 				<!-- duality -->
 				<strong>duality & transformations</strong>
@@ -121,6 +132,22 @@
 				$$
 					f(a t) \rightleftharpoons \frac{1}{|a|} F(\frac{s}{a})
 				$$
+
+
+				<hr class="small_hr"/>
+
+
+
+
+				<!-- coefficients -->
+				<strong>coefficients</strong>
+        $$ c_n = \frac{1}{T}  \int_{-T/2}^{T/2} e^{-2 \pi i n t / T} f(t) dt $$
+
+        Often put $ \frac{1}{\sqrt T} $ into harmonic $ \frac{1}{\sqrt T} e^{-2 \pi i n t / T} $
+
+
+
+
 
 
 				</center>
