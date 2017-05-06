@@ -54,4 +54,4 @@ And so we are at last led precisely back to our point on economic versus politic
 
 This means that were the idea of a Universal Basic Income to gain ground (which I argue it inevitably _must_), London has to share its pie amongst a much wider demographic base. This likely means higher taxes i.e. less competitiveness. More broadly speaking, in the future, economic "units" that are able to generate value-add more efficiently, be that intrinsically through a smaller population, or through clever innovation, will be the most competitive economies. They will attract more of the decreasingly human factors of production, and have more leeway for investment in infrastructure and its people per capita.
 
-Thus the tables are turned, and what may seem an Achille's heel for a city-state, may in fact prove to be its secret economic weapon in the long-run.
+Thus the tables are turned, and what may seem an Achilles' heel for a city-state, may in fact prove to be its secret economic weapon in the long-run.
