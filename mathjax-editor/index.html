@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Misrab.me</title>
+
+	<link rel="shortcut icon" href="/images/personal/Misrab.ico">
+
+	<link rel='stylesheet' href='//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css' />
+	<link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' />
+
+	<link rel='stylesheet' href='/styles/personal.css' />
+
+</head>
+
+<style>
+  .preview {
+    border: 1px solid grey;
+    background-color: white;
+  }
+
+  .text-entry, .preview {
+    width: 100%;
+    min-height: 800px;
+    padding: 10px;
+  }
+</style>
+
+<body>
+
+
+	<div class="container" id="content">
+		<div class="row">
+      <div class="col-md-12">
+        <h1>Mathjax Editor</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <textarea class="form-control text-entry"></textarea>
+      </div>
+      <div class="col-md-6">
+        <div class="preview"></div>
+      </div>
+    </div>
+
+
+	</div>
+
+
+
+
+	<!-- footer -->
+	<span class="pull-right">Copyright Misrab F.K.</span>
+
+
+	<!-- Javascripts -->
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" ></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js" ></script>
+
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" ></script>
+
+  <!-- Mathjax -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+	<script type="text/javascript">
+    function markdown(text) {
+      return text;
+    }
+
+    $('.text-entry').keyup(function(e) {
+      e.preventDefault();
+
+      var input = e.target.value.replace(/\n\r?/g, '<br />');
+      var text = markdown(input);
+      $('.preview').html(text);
+    });
+
+
+
+    // MathJax
+    MathJax.Hub.Config({
+	    //extensions: ["tex2jax.js"],
+	    jax: ["input/TeX","output/HTML-CSS"],
+	    tex2jax: {
+	        inlineMath: [["$","$"],["\\(","\\)"]],
+	        displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
+	        processEscapes: true
+	    }
+	  });
+	</script>
+
+</body>
+</html>
