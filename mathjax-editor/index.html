@@ -26,6 +26,7 @@
     width: 100%;
     min-height: 800px;
     padding: 10px;
+		border-radius: 0;
   }
 </style>
 
@@ -36,10 +37,12 @@
 		<div class="row">
       <div class="col-md-12">
         <h1>Mathjax Editor</h1>
+
+				<button class="refresh-mathjax btn btn-default">Refresh Mathjax</button>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="margin-top: 10px;">
       <div class="col-md-6">
         <textarea class="form-control text-entry"></textarea>
       </div>
@@ -83,6 +86,11 @@
       var text = markdown(input);
       $('.preview').html(text);
     });
+
+		$('.refresh-mathjax').click(function(e) {
+			e.preventDefault();
+			MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+		});
 
 
 
