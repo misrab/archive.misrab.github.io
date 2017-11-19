@@ -45,6 +45,8 @@
     <div class="row" style="margin-top: 10px;">
       <div class="col-md-6">
         <textarea class="form-control text-entry"></textarea>
+
+				<button style="margin-top: 10px;" class="refresh-mathjax btn btn-default">Refresh Mathjax</button>
       </div>
       <div class="col-md-6">
         <div class="preview"></div>
@@ -75,6 +77,8 @@
 
 
 	<script type="text/javascript">
+
+
     function markdown(text) {
       return text;
     }
@@ -85,6 +89,8 @@
       var input = e.target.value.replace(/\n\r?/g, '<br />');
       var text = markdown(input);
       $('.preview').html(text);
+
+			// MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
     });
 
 		$('.refresh-mathjax').click(function(e) {
