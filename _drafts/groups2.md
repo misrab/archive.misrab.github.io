@@ -4,7 +4,7 @@ layout: blog
 image: /images/groups2/3.svg
 date: 2015-03-25
 excerpt: |
-  Armed with some terminology, we now explore some more 
+  Armed with some terminology, we now explore some more
   interesting concepts in group theory, notably quotient groups
 ---
 
@@ -16,15 +16,15 @@ _Posted on March 25th, 2015_
 
 ## Introduction
 
-This is a follow-up to my previous introduction 
+This is a follow-up to my previous introduction
 to [abstract groups](/mathematics/2015-02-26-groups.html).
 
-Let's recap what we've been doing so far. We have these things called "groups", with 
-an associative operation $\circ$ defined between elements, identities and 
+Let's recap what we've been doing so far. We have these things called "groups", with
+an associative operation $\circ$ defined between elements, identities and
 inverses. Addition on real numbers is a group. Division on integers is not, since $1/2 \notin \mathbf{Z}$.
 
-We then looked at maps between groups written $ f: G \rightarrow G' $. **Homomorphism**, 
-where $f(a) \cdot f(b) = f(a) \cdot f(b)$ seemed interesting in the way they preserve some 
+We then looked at maps between groups written $ f: G \rightarrow G' $. **Homomorphism**,
+where $f(a) \cdot f(b) = f(a) \cdot f(b)$ seemed interesting in the way they preserve some
 sort of structure between groups. Isomorphisms present seemingly disparate groups as one.
 
 Let's see if we can break these maps into more detail.
@@ -50,7 +50,7 @@ Note that what's special here is that $g$ is in $G$, not necessarily $K$. In oth
 
 ## Kernel of a Homomorphism
 
-Consider the kernel of a homomorphism $ \phi: G \rightarrow G' $. In other words, consider 
+Consider the kernel of a homomorphism $ \phi: G \rightarrow G' $. In other words, consider
 $ \ker(\phi) = \\{ g \in G : \phi(g) = e' \\} $. It turns out that kernels are subgroups of $G$, but a _homomorphic_ kernel is also a _normal_ subgroup. The proof is straighforward.
 
 Consider $b \in ker(\phi)$ and $a \in G$. We want to show that $ker(\phi) \subset G$ is closed as a normal subgroup. In other words, that $a b a^{-1} \in ker(\phi)$...in _other_ words, that $\phi(a b a^{-1}) = e'$. We use the homomorphism property:
@@ -97,12 +97,12 @@ These are properties we'd like for a notion of equality. In our modular example,
 	<br /><br />
 </center>
 
-In the case of integers $\pmod n$, each partition corresponds to a set of integers, formed by given integer $a < n$, with all integer multiples of $n$. In other words, we have a class 
+In the case of integers $\pmod n$, each partition corresponds to a set of integers, formed by given integer $a < n$, with all integer multiples of $n$. In other words, we have a class
 $$
 	\bar{a} = \{  ...a-3n, a-2n, a-n, a, a + n, a + 2n, a + 3n... \}.
 $$
 
-We then have a _new_ set of order $n$ of these equivalence classes, that we call 
+We then have a _new_ set of order $n$ of these equivalence classes, that we call
 $\mathbf{Z}/n\mathbf{Z}$. Namely,
 $$
 	\mathbf{Z}/n\mathbf{Z} = \{ \bar{0}, \bar{1}, ... , \overline{n-1} \}
@@ -115,9 +115,9 @@ Fantastic, so now we've seen modular arithmetic as a partition of the integers, 
 
 **Quick reminder**: we're doing group theory here, where we have an _arbitrary_ operation $\circ$. We use the symbols $+$ and $*$ because they're familiar. But never forget, we want to generalise to any group operation $\circ$, and will interchange notation. Try to keep reminding yourself of this whenever you see these symbols.
 
-Cosets are easy. Take a subgroup $H \subset G$. Take a _fixed_ element $a \in G$. We now have a coset of $H$ in $G$, denoted $aH = \\{ ah : h \in H \\}$. Voilà! A subtle point is that group operations are not always commutative, so technically this is a _left_ coset; you can imagine what a right coset is. 
+Cosets are easy. Take a subgroup $H \subset G$. Take a _fixed_ element $a \in G$. We now have a coset of $H$ in $G$, denoted $aH = \\{ ah : h \in H \\}$. Voilà! A subtle point is that group operations are not always commutative, so technically this is a _left_ coset; you can imagine what a right coset is.
 
-Here's what's _really_ cool: if you think about it, the left (or right) cosets of a _subgroup_ partition the _group_. We've already seen this with modular arithmetic. The subgroup there was $n\mathbf{Z} = \\{ ...-3n, -2n, -n, 0, n, 2n, 3n... \\}$. The group was 
+Here's what's _really_ cool: if you think about it, the left (or right) cosets of a _subgroup_ partition the _group_. We've already seen this with modular arithmetic. The subgroup there was $n\mathbf{Z} = \\{ ...-3n, -2n, -n, 0, n, 2n, 3n... \\}$. The group was
 $\mathbf{Z}$. We partitioned $\mathbf{Z}$ (the group) into $\mathbf{Z}/n\mathbf{Z} = \\{ \bar{0}, \bar{1}, ... , \overline{n-1} \\}$.
 
 The coset view of this partition is as follows: for each element $a \in \mathbf{Z}$, the equivalence class $\bar{a}$ is given by $a \circ n\mathbf{Z}$. The $\circ$ operation we've been using is $+$, but as we'll see now, we should not get too attached to this.
@@ -125,7 +125,7 @@ The coset view of this partition is as follows: for each element $a \in \mathbf{
 
 ## Quotient Groups
 
-Alright, I promised an introductory generalisation of modular math, and here it is. The concept is deep and we'll explore it further. The "thing" $\mathbf{Z}/n\mathbf{Z}$ is called a quotient group, more generally $G / H$ for a group $G$ with subgroup $H$. However, it turns out we can't choose just any subgroup $H$; it actually has to be 
+Alright, I promised an introductory generalisation of modular math, and here it is. The concept is deep and we'll explore it further. The "thing" $\mathbf{Z}/n\mathbf{Z}$ is called a quotient group, more generally $G / H$ for a group $G$ with subgroup $H$. However, it turns out we can't choose just any subgroup $H$; it actually has to be
 **normal**.
 
 Why is this the case? Because we've partitioned $G$ into a set of equivalence classes, but for it to be called a (quotient) _group_, we need a to define a group operation. For this operation to be naturally well-defined, we'll need normality. As the French would say, that allows "transport de structure" from the operation already defined on $G$.
@@ -140,6 +140,6 @@ Quotient groups, a generalisation of modular arithmetic, require a fair bit of b
 
 ## Ackowledgements
 
-A huge thanks to anyone contributing to open-source in general, 'tis the best 
-way forward. In this specific case, thanks to Harvard's online 
+A huge thanks to anyone contributing to open-source in general, 'tis the best
+way forward. In this specific case, thanks to Harvard's online
 [Abstract Algebra course](http://www.extension.harvard.edu/open-learning-initiative/abstract-algebra).
