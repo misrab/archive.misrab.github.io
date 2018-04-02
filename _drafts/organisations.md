@@ -1,7 +1,7 @@
 ---
 title: Things I Learnt Building a Team
 layout: blog
-image: /images/organisations/cover.png
+image: /images/organisations/3.png
 date: 2018-04-02
 excerpt: |
   A preliminary general theory of organisations
@@ -76,7 +76,16 @@ Consider a dense or complete graph. How does the communication overhead (edges) 
 
 ![scaling edges equation]({{ site.url }}/images/organisations/4.png)
 
-For an idea of magnitude, this means 100 individuals end up with 10,000 communication channels. Think that's unrealistic? Even if divided into teams of 20, we're talking talking 500 channels. Fancy halving the graph's density? We're still talking 250 channels. The point is that it scales quadratically. In other words, it does not scale. If you're a business, forget about your competitors committing homicide. You've just committed suicide.
+For an idea of magnitude, this means 100 individuals end up with on the order (remember this is Big O) of 10,000 communication channels. Think that's unrealistic? Even if divided into teams of 5, we're talking talking 4000 channels. Fancy halving the graph's density? We're still talking 2000 channels. The point is that it scales quadratically. In other words, it does not scale. If you're a business, forget about your competitors committing homicide. You've just committed suicide.
+
+The good this is that alternative organisational designs are completely possible. Take the most common solution approach, for instance: hierarchy. Graphically speaking, this means organising nodes into a k-tree, where k is the number of splits at each level of the tree.
+
+![scaling tree]({{ site.url }}/images/organisations/5.png)
+
+This could represent a CEO, to whom VP's report, to whom team leads report. The good news is that trees with n nodes have at n-1 edges. The problem in this case is that there are downsides to excessive hierarchy, including team isolation, employee dissatisfaction, and communication breakdown itself. The height of a tree with k splits is the number of times you need to multiply k to get number of leaf nodes. For example, if we had 156 individuals (for simplicity), we would have 125 leaves, and a communication depth of at least 3. This is reasonable for smaller organisations, but doesn't scale much further. In fact, I would go so far as to say that any indirect communication across nodes ([Chinese Whispers](https://en.wikipedia.org/wiki/Chinese_whispers)) leads to issues.
+
+Another alternative is to divide people into extremely tightly woven, multi-skilled SWAT teams. 
+
 
 
 ## Edge Quality
