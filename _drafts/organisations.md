@@ -82,13 +82,46 @@ The good this is that alternative organisational designs are completely possible
 
 ![scaling tree]({{ site.url }}/images/organisations/5.png)
 
-This could represent a CEO, to whom VP's report, to whom team leads report. The good news is that trees with n nodes have at n-1 edges. The problem in this case is that there are downsides to excessive hierarchy, including team isolation, employee dissatisfaction, and communication breakdown itself. The height of a tree with k splits is the number of times you need to multiply k to get number of leaf nodes. For example, if we had 156 individuals (for simplicity), we would have 125 leaves, and a communication depth of at least 3. This is reasonable for smaller organisations, but doesn't scale much further. In fact, I would go so far as to say that any indirect communication across nodes ([Chinese Whispers](https://en.wikipedia.org/wiki/Chinese_whispers)) leads to issues.
+This could represent a CEO, to whom VP's report, to whom team leads report. The good news is that trees with n nodes have at n-1 edges. The problem in this case is that there are downsides to excessive hierarchy, including team isolation, employee dissatisfaction, and communication breakdown itself. The height of a tree with k splits is the number of times you need to multiply k to get number of leaf nodes (hence the logarithm). For example, if we had 156 individuals (for simplicity), we would have 125 leaves, and a communication depth of at least 3. This is reasonable for smaller organisations, but doesn't scale much further. In fact, I would go so far as to say that any indirect communication across nodes ([Chinese Whispers](https://en.wikipedia.org/wiki/Chinese_whispers)) leads to issues.
 
-Another alternative is to divide people into extremely tightly woven, multi-skilled SWAT teams. 
+Another alternative is to divide people into extremely tightly woven, multi-skilled SWAT teams. The multidisciplinary nature of such teams, and their small size (e.g. ~5 people) is precisely why we can think of them as independent nodes in the organisation, able to take reasonably sized projects end-to-end. Communication can still build up across teams, so one might choose to limit the degree of any node to, say, 2.
 
+![swat graph]({{ site.url }}/images/organisations/6.png)
+
+The SWAT team structure is in fact a special case of a very common structure: large functional teams like "product", "data science" and "business intelligence". I think the problem with those are threefold:
+
+1. such teams often get too big, meaning the node abstraction doesn't really apply
+2. node degree (number of connections to other teams) usually explodes
+3. skillsets tend to be relatively homogeneous. This again fails the node abstraction (1), and contributes to (2) as constant cross-team, cross-skill interaction is required
+
+That said, there are benefits to having specialised functional teams. This leads to what I call a heterogeneous SWAT team structure. You have your usual SWAT teams, but certain functional teams or individuals float around as required. These are kept small, but perhaps don't fit into SWAT teams' degree restriction. The kind of nerdy analogy I have in my mind is teams of superheroes/differently skilled characters in a game/military tactical units (pick your favourite or make up a new one) going on quests end-to-end. As multiskilled as these teams are, they sometimes encounter and obstacle that requires a drill team/some artillery. So they call the functional support team in do to some temporary heavy lifting, and carry on.
+
+There is a separate advantage to this approach: individuals' motivation levels. Think about how you would feel going to work with your closely knit squad, versus a large homogeneous amorphous group. It also doens't have to be a permanent situation; there is plenty of scope for occasional rotation of individuals across nodes.
+
+The heterogeneous SWAT team structure is currently the best I can come up with for any organisation of more than 10 people. And I think it scales well. That said, I can imagine all sorts of alterations that might work best in any given environment, albeit with the same underlying principles from this model.
+
+
+## A Note on Concurrency
+
+Organisations are in many ways distributed systems of human beings, and I would be remiss not to highlight the absolutely crucial point of **concurrency**, as well as point out a common misconception about **parallelism**.
+
+The usual analogy is that of digging a hole. To dig it faster, you could get a bigger spade. This corresponds to making nodes better at what they do, for example with skills mentorship. An alternative would be to get your friends to help you out. At some point you'd probably get in each other's way, so it might make sense to increase your output by each digging an identical hole at the same time. This is the basis of parallelism: doing many similar tasks independently at the same time.
+
+Concurrency is a much broader idea. Now you and your friends are doing different tasks, some you digging, some of you sharpening spades, some of you carrying dirt out of the way. Importantly, different parties will have to interact at certain points, and this can lead to bottlenecks. If you can't shovel anymore because you're waiting for someone to clear the dirt around you, you're stuck idle and unproductive. In fact, we can visualise what happens when an interdependent group has to wait for its slowest member:
+
+![concurrency squiggly]({{ site.url }}/images/organisations/7.png)
+
+There are two mains things we can do to avoid painful idle time. Firstly, we can try and make interactions **asynchronous** (non-blocking) instead of synchronous. We'll describe this more in the section of edge (communication) quality. Secondly, we can limit cross-team dependencies, which is exactly where the SWAT team model comes in. It's worth noting that beyond simply wasting productivity, idleness due to excessive dependencies can be a leading cause of demotivation.
 
 
 ## Edge Quality
+
+Now that we've spoken about managing how communication scales, let's look at how to maintain high standards of
+communication quality. This could be translated into our model as edge weights/thickness, denoting the quality or alternatively the cost of a given interaction link (though cost makes more sense in that we could look at metrics like the weighted average of edges in the graph).
+
+
+
+
 
 ## Information Processing
 
